@@ -9,7 +9,12 @@ interface CreateNewTodoInterface {
 const CreateNewTodo: FC<CreateNewTodoInterface> = () => {
     return (
         <div className='CreateNewTodo Palette'>
-            <input type="text" name="new-todo" />
+            <input 
+                type="text" 
+                name="new-todo" 
+                className="Form" 
+                placeholder="Create new task ..."
+            />
         </div>
     )
 }

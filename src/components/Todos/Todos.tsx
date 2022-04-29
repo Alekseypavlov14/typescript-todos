@@ -1,5 +1,5 @@
 import { FC } from "react"
-import { Todo } from "../Todo/Todo"
+import { Todo } from "../Todo/index"
 import { TodoType } from './../../types/Todo.type'
 
 interface TodosInterface {
