@@ -10,7 +10,7 @@ const Todos: FC<TodosInterface> = ({ todos, ...props }) => {
     return (
         <div className='Todos Palette'>
             {todos.map(todo => (
-                <Todo todo={todo} />
+                <Todo todo={todo} key={todo._id}/>
             ))}
         </div>
     )

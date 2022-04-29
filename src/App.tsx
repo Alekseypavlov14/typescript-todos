@@ -8,10 +8,12 @@ function App() {
   const [todos, setTodos] = useState(() => {
     const todos: TodoType[] = [{
       content: 'Hello',
-      isDone: false
+      isDone: false,
+      _id: Date.now()
     }, {
       content: 'TODO',
-      isDone: true
+      isDone: true,
+      _id: Date.now() + 1
     }]
     return todos
   })
