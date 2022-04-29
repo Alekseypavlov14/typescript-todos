@@ -1,2 +1,4 @@
-[] - Add Todo item module
-[] - 
+[] - realize adding todos
+[] - enable saving todos
+[] - render isDone property of todo
+[] - enable deleting by swipes
