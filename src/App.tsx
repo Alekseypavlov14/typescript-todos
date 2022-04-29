@@ -9,6 +9,9 @@ function App() {
     const todos: TodoType[] = [{
       content: 'Hello',
       isDone: false
+    }, {
+      content: 'TODO',
+      isDone: true
     }]
     return todos
   })

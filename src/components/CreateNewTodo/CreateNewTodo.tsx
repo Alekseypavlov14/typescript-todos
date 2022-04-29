@@ -1,6 +1,6 @@
 import { FC } from "react"
 import { TodoType } from "../../types/Todo.type"
-import './CreateNewTodo.module.css'
+import './CreateNewTodo.css'
 
 interface CreateNewTodoInterface {
     addTodo: (todo: TodoType) => void
