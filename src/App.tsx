@@ -1,14 +1,12 @@
 import { useState } from 'react'
+import { CreateNewTodo } from './components/CreateNewTodo/index'
 import './App.css'
-import { CreateNewTodo } from './components/CreateNewTodo/CreateNewTodo'
 
 function App() {
-  const [todos, setTodos] = useState([])
-
   return (
     <div className="App">
-      <header className='header'>
-        <div className="title">TODO</div>
+      <header className='Header'>
+        <div className="Title">TODO</div>
       </header>
 
       <CreateNewTodo />
