@@ -1,7 +1,10 @@
 import { FC } from "react"
+import { TodoType } from "../../types/Todo.type"
 import './CreateNewTodo.module.css'
 
-interface CreateNewTodoInterface {}
+interface CreateNewTodoInterface {
+    addTodo: (todo: TodoType) => void
+}
 
 const CreateNewTodo: FC<CreateNewTodoInterface> = () => {
     return (
