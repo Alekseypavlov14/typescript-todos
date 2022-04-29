@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { CreateNewTodo } from './components/CreateNewTodo/index'
 import './App.css'
+import { Todos } from './components/Todos/index'
 
 function App() {
   return (
@@ -10,6 +11,8 @@ function App() {
       </header>
 
       <CreateNewTodo />
+
+      <Todos />
     </div>
   )
 }
