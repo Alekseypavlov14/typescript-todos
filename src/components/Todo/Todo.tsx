@@ -24,7 +24,7 @@ const Todo: FC<TodoInterface> = ({ todo, deleteTodoById }) => {
 
             right(e => {
                 if (e.target instanceof HTMLDivElement) {
-                    if (e.distance < 60) {
+                    if (e.distance < 100) {
                         e.target.style.transform = 'translateX(0px)'
                     } else {
                         e.target.style.transform = `translateX(100%)`
@@ -38,7 +38,7 @@ const Todo: FC<TodoInterface> = ({ todo, deleteTodoById }) => {
     return (
         <div 
             id={todo._id.toString()} 
-            className={styles.Todo}
+            className={['Palette', styles.Todo].join(' ')}
             ref={TodoRef}
         >
             {todo.content}

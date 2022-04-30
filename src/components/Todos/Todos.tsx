@@ -10,7 +10,7 @@ interface TodosInterface {
 
 const Todos: FC<TodosInterface> = ({ todos, deleteTodoById }) => {
     return (
-        <div className='Todos Palette'>
+        <div className='Todos'>
             {todos.map(todo => (
                 <Todo 
                     deleteTodoById={deleteTodoById} 

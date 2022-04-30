@@ -7,11 +7,9 @@ import './App.css'
 
 function App() {
   // create todos state from localStorage or new TodoType[]
-  const [todos, setTodos] = useState(() => {
-    const savedTodos = JSON.parse(localStorage.getItem('todos') || '[]')
-    const todos: TodoType[] = savedTodos
-    return todos
-  })
+  const [todos, setTodos] = useState<TodoType[]>(
+    JSON.parse(localStorage.getItem('todos') || '[]')
+  )
 
   // create add todo handler
   function addTodo(todo: TodoType) {
