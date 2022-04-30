@@ -1,4 +1,4 @@
-import { FC } from "react"
+import { FC, useState } from "react"
 import { TodoType } from "../../types/Todo.type"
 import './CreateNewTodo.css'
 
@@ -6,7 +6,9 @@ interface CreateNewTodoInterface {
     addTodo: (todo: TodoType) => void
 }
 
-const CreateNewTodo: FC<CreateNewTodoInterface> = ({ addTodo, ...props}) => {
+const CreateNewTodo: FC<CreateNewTodoInterface> = ({ addTodo, ...props }) => {
+    const [value, setValue] = useState('')
+
     function addTodoHandler(value: string) {
         addTodo({
             isDone: false,
@@ -22,7 +24,13 @@ const CreateNewTodo: FC<CreateNewTodoInterface> = ({ addTodo, ...props}) => {
                 name="new-todo" 
                 className="Form" 
                 placeholder="Create new task ..."
-                onEnded={(e) => console.log(e)}
+                value={value}
+                onChange={(e) => setValue(e.target.value)}
+                onKeyUp={(e) => {
+                    if (e.key !== 'Enter') return
+                    addTodoHandler(value)
+                    setValue('')
+                }}
             />
         </div>
     )

@@ -6,22 +6,13 @@ import './App.css'
 
 function App() {
   const [todos, setTodos] = useState(() => {
-    const todos: TodoType[] = [{
-      content: 'Hello',
-      isDone: false,
-      _id: Date.now()
-    }, {
-      content: 'TODO',
-      isDone: true,
-      _id: Date.now() + 1
-    }]
+    const todos: TodoType[] = []
     return todos
   })
 
   function addTodo(todo: TodoType) {
     setTodos(todos => {
-      todos.push(todo)
-      return todos
+      return todos.concat([todo])
     })
   }
 
