@@ -1,4 +1,5 @@
-[] - realize adding todos
-[] - enable saving todos
+30.04.2022
+[+] - realize adding todos
+[+] - enable saving todos
 [] - render isDone property of todo
-[] - enable deleting by swipes
+[+] - enable deleting by swipes

@@ -6,7 +6,7 @@ interface CreateNewTodoInterface {
     addTodo: (todo: TodoType) => void
 }
 
-const CreateNewTodo: FC<CreateNewTodoInterface> = ({ addTodo, ...props }) => {
+const CreateNewTodo: FC<CreateNewTodoInterface> = ({ addTodo }) => {
     const [value, setValue] = useState('')
 
     function addTodoHandler(value: string) {
@@ -18,12 +18,13 @@ const CreateNewTodo: FC<CreateNewTodoInterface> = ({ addTodo, ...props }) => {
     }
 
     return (
-        <div className='CreateNewTodo Palette' {...props}>
+        <div className='CreateNewTodo Palette'>
             <input 
                 type="text" 
                 name="new-todo" 
                 className="Form" 
                 placeholder="Create new task ..."
+                autoComplete="off"
                 value={value}
                 onChange={(e) => setValue(e.target.value)}
                 onKeyUp={(e) => {

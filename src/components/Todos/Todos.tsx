@@ -1,16 +1,18 @@
 import { FC } from "react"
-import { Todo } from "../Todo/index"
+import { deleteTodoByIdType } from "../../types/DeleteTodoById.type"
 import { TodoType } from './../../types/Todo.type'
+import { Todo } from "../Todo/index"
 
 interface TodosInterface {
-    todos: TodoType[]
+    todos: TodoType[],
+    deleteTodoById: deleteTodoByIdType
 }
 
-const Todos: FC<TodosInterface> = ({ todos, ...props }) => {
+const Todos: FC<TodosInterface> = ({ todos, deleteTodoById }) => {
     return (
         <div className='Todos Palette'>
             {todos.map(todo => (
-                <Todo todo={todo} key={todo._id}/>
+                <Todo deleteTodoById={deleteTodoById} todo={todo} key={todo._id}/>
             ))}
         </div>
     )
