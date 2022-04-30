@@ -12,7 +12,11 @@ const Todos: FC<TodosInterface> = ({ todos, deleteTodoById }) => {
     return (
         <div className='Todos Palette'>
             {todos.map(todo => (
-                <Todo deleteTodoById={deleteTodoById} todo={todo} key={todo._id}/>
+                <Todo 
+                    deleteTodoById={deleteTodoById} 
+                    todo={todo} 
+                    key={todo._id}
+                />
             ))}
         </div>
     )

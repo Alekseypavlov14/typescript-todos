@@ -29,6 +29,7 @@ const CreateNewTodo: FC<CreateNewTodoInterface> = ({ addTodo }) => {
                 onChange={(e) => setValue(e.target.value)}
                 onKeyUp={(e) => {
                     if (e.key !== 'Enter') return
+                    if (!value.trim()) return
                     addTodoHandler(value)
                     setValue('')
                 }}

@@ -1,15 +1,15 @@
 import { CreateNewTodo } from './components/CreateNewTodo/index'
+import { deleteTodoByIdType } from './types/DeleteTodoById.type'
 import { Todos } from './components/Todos/index'
 import { TodoType } from './types/Todo.type'
 import { useEffect, useState } from 'react'
 import './App.css'
-import { deleteTodoByIdType } from './types/DeleteTodoById.type'
 
 function App() {
   // create todos state from localStorage or new TodoType[]
   const [todos, setTodos] = useState(() => {
     const savedTodos = JSON.parse(localStorage.getItem('todos') || '[]')
-    const todos: TodoType[] = savedTodos || []
+    const todos: TodoType[] = savedTodos
     return todos
   })
 
@@ -20,7 +20,7 @@ function App() {
     })
   }
 
-  // create deleteTodoById: id => filtered TodoType[] (without todo._id)
+  // create deleteTodoById: id => filter Todos
   const deleteTodoById: deleteTodoByIdType = id => {
     setTodos(todos => todos.filter(todo => todo._id !== id))
   }
