@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/typescript-todos/static/css/main.b36306ba.css",
-    "main.js": "/typescript-todos/static/js/main.de1cf3a4.js",
+    "main.js": "/typescript-todos/static/js/main.b5a64729.js",
     "index.html": "/typescript-todos/index.html",
     "main.b36306ba.css.map": "/typescript-todos/static/css/main.b36306ba.css.map",
-    "main.de1cf3a4.js.map": "/typescript-todos/static/js/main.de1cf3a4.js.map"
+    "main.b5a64729.js.map": "/typescript-todos/static/js/main.b5a64729.js.map"
   },
   "entrypoints": [
     "static/css/main.b36306ba.css",
-    "static/js/main.de1cf3a4.js"
+    "static/js/main.b5a64729.js"
   ]
 }
