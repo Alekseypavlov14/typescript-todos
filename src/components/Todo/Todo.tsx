@@ -37,7 +37,7 @@ const Todo: FC<TodoInterface> = ({ todo, deleteTodoById }) => {
 
     return (
         <div 
-            id={todo._id.toString()} 
+            id={String(todo._id)} 
             className={['Palette', styles.Todo].join(' ')}
             ref={TodoRef}
         >
