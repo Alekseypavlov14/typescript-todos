@@ -5,7 +5,7 @@ import { TodoType } from './types/Todo.type'
 import { useEffect, useState } from 'react'
 import './App.css'
 
-window.onerror = (e) => console.log(e)
+window.onerror = (e) => alert(e)
 
 function App() {
   // create todos state from localStorage or new TodoType[]
